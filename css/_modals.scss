@@ -1,0 +1,67 @@
+.modal-dialog {
+    width: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-content {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    border-radius: 0px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-head-part {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px 30px 10px;
+    background-color: #41A1D9;
+    color: white;
+}
+
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-number {
+    font-size: 14px;
+}
+
+.modal-ul {
+    margin-top: 15px;
+    padding: 15px;
+
+    .modal-li {
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        i {
+            text-align: center;
+            width: 40px;
+            font-size: 22px;
+            color: #A8A8A8;
+            margin-right: 15px;
+        }
+
+        .modal-li-p {
+            color: black;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .toggle-icon {
+            margin-left: auto;
+        }
+    }
+}
