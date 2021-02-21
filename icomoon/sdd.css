@@ -1,0 +1,132 @@
+.icon-smile:before {
+    content: "\e91e";
+}
+
+.icon-chat:before {
+    content: "\e91d";
+}
+
+.icon-groups:before {
+    content: "\e900";
+}
+
+.icon-bot:before {
+    content: "\e901";
+}
+
+.icon-at:before {
+    content: "\e902";
+}
+
+.icon-bell-outline:before {
+    content: "\e903";
+}
+
+.icon-bullhorn:before {
+    content: "\e904";
+}
+
+.icon-check_box_outline_blank-24px:before {
+    content: "\e905";
+}
+
+.icon-check_box-24px:before {
+    content: "\e906";
+}
+
+.icon-close:before {
+    content: "\e907";
+}
+
+.icon-dots:before {
+    content: "\e908";
+}
+
+.icon-iconmonstr-info-2:before {
+    content: "\e909";
+}
+
+.icon-information-outline:before {
+    content: "\e90a";
+}
+
+.icon-search:before {
+    content: "\e90b";
+}
+
+.icon-magnify:before {
+    content: "\e90c";
+}
+
+.icon-menu:before {
+    content: "\e90d";
+    color: #8393A3;
+    font-size: 30px;
+}
+
+.icon-microphone:before {
+    content: "\e90e";
+}
+
+.icon-paperclip:before {
+    content: "\e90f";
+}
+
+.icon-pencil:before {
+    content: "\e910";
+}
+
+.icon-pencil-outline:before {
+    content: "\e911";
+}
+
+.icon-user-outline:before {
+    content: "\e912";
+}
+
+.icon-user:before {
+    content: "\e913";
+}
+
+.icon-phone:before {
+    content: "\e914";
+}
+
+.icon-phone-outline:before {
+    content: "\e915";
+}
+
+.icon-send-b:before {
+    content: "\e916";
+    color: rgb(132, 219, 255);
+}
+
+.icon-send .path2:before {
+    content: "\e917";
+    margin-left: -1em;
+    color: rgb(84, 201, 235);
+}
+
+.icon-send .path3:before {
+    content: "\e918";
+    margin-left: -1em;
+    color: rgb(239, 239, 239);
+}
+
+.icon-send .path4:before {
+    content: "\e919";
+    margin-left: -1em;
+    color: rgb(197, 216, 223);
+}
+
+.icon-sends:before {
+    content: "\e91a";
+}
+
+.icon-toggle_off-24px:before {
+    content: "\e91b";
+}
+
+.icon-toggle_on-24px:before {
+    content: "\e91c";
+}

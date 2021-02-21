@@ -41,10 +41,17 @@
         // }
 
         .contacts-li {
-            width: 100%;
+            margin: 0 auto;
+            border-radius: 7px;
+            width: 95%;
             padding: 15px;
             display: flex;
             align-items: center;
+            transition: background-color ease 0.15s;
+
+            &:hover {
+                background-color: #EDF2F7;
+            }
 
             .contacts-profile-img {
                 width: 50px;
@@ -66,7 +73,12 @@
 
                 .contact-last-text {
                     font-size: 13px;
-                    color: #8393A3;
+                    color: #A8A8A8;
+                    text-overflow: ellipsis;
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 250px;
                 }
             }
         }

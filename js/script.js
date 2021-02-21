@@ -9,17 +9,22 @@ let submitButton = document.querySelector('[data-submit]')
 let messages = []
 
 /* TEXT TO MESSAGE */
+
 textMessage.addEventListener('keyup', event => {
-    if(event.keyCode === 13){
+    if (event.keyCode === 13) {
         submitButton.click()
     }
 })
 
 submitButton.addEventListener('click', event => {
     event.preventDefault()
-
-    textToMessage(textMessage.value)
+    if (textMessage.value) {
+        textToMessage(textMessage.value)
+    }
 })
+
+console.log(textMessage.value);
+
 
 function textToMessage(value) {
     messages.push(value)
@@ -29,7 +34,7 @@ function textToMessage(value) {
 }
 
 function renderMessages(array) {
-    messagesList.textContent = ""
+    // messagesList.textContent = ""
 
     array.forEach((message, index) => {
         let newMessage = document.createElement('li')
@@ -40,11 +45,6 @@ function renderMessages(array) {
         newText.textContent = message
         newMessage.appendChild(newText)
         messagesList.appendChild(newMessage);
-        window.scroll({
-            top: 2500,
-            left: 0,
-            behavior: 'smooth'
-        })
     });
 
     location.href = '#message' + (array.length - 1)
@@ -57,5 +57,10 @@ renderMessages(messages)
 paperclipButton.addEventListener('click', () => {
     inputFileElement.click()
 })
+
+/* MODAL */
+
+
+
 
 

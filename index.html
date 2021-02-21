@@ -7,14 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram Desktop</title>
 
+    <link rel="stylesheet" href="icomoon/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"> -->
+
     <link rel="icon" href="img/768px-Telegram_Messenger.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -27,49 +30,49 @@
     <div class="wrapper">
         <div class="nav-section">
             <button type="button" class="btn menu-button" data-bs-toggle="modal" data-bs-target="#sideBar">
-                <i class="fas fa-bars menu-bar"></i>
+                <i class="icon-menu"></i>
             </button>
 
             <div class="modal fade" id="sideBar" tabindex="-1" aria-labelledby="sideBarLabel" aria-hidden="true">
-                <div class="modal-dialog animate__animated animate__slideInLeft">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="modal-head-part">
-                                <img src="img/profile-img.jpg" alt="" class="profile-img">
-                                <p class="profile-name">☪ 𝐇𝐮𝐦𝐨𝐲𝐮𝐧</p>
-                                <p class="profile-number">+998 97 7222829</p>
+                <div class="modal-dialog sidebar-modal-dialog animate__animated animate__slideInLeft">
+                    <div class="modal-content sidebar-modal-content">
+                        <div class="modal-body sidebar-modal-body">
+                            <div class="sidebar-modal-head-part">
+                                <img src="img/profile-img.jpg" alt="" class="sidebar-profile-img">
+                                <p class="sidebar-profile-name">☪ 𝐇𝐮𝐦𝐨𝐲𝐮𝐧</p>
+                                <p class="sidebar-profile-number">+998 97 7222829</p>
                             </div>
                             <ul class="modal-ul">
                                 <li class="modal-li">
-                                    <i class="fas fa-users groups-icon"></i>
+                                    <i class="icon-groups groups-icon"></i>
                                     <p class="modal-li-p">New Group</p>
                                 </li>
                                 <li class="modal-li">
-                                    <i class="fas fa-bullhorn channels-icon"></i>
+                                    <i class="icon-bullhorn channels-icon"></i>
                                     <p class="modal-li-p">New Channel</p>
                                 </li>
                                 <li class="modal-li">
-                                    <i class="fas fa-user user-icon"></i>
+                                    <i class="icon-user user-icon"></i>
                                     <p class="modal-li-p">Contacts</p>
                                 </li>
                                 <li class="modal-li">
-                                    <i class="fas fa-phone-alt phone-icon"></i>
+                                    <i class="icon-phone-outline phone-icon"></i>
                                     <p class="modal-li-p">Calls</p>
                                 </li>
                                 <li class="modal-li">
-                                    <i class="fas fa-cog settings-icon"></i>
+                                    <i class="icon-settings settings-icon"></i>
                                     <p class="modal-li-p">Settings</p>
                                 </li>
                                 <li class="modal-li">
-                                    <i class="fas fa-moon moon-icon"></i>
+                                    <i class="icon-moon moon-icon"></i>
                                     <p class="modal-li-p">Night Mode</p>
-                                    <i class="fas fa-toggle-off toggle-icon"></i>
+                                    <i class="icon-toggle-switch-off-outline toggle-icon"></i>
                                 </li>
                             </ul>
                         </div>
                         <div class="modal-footer">
-                            <strong>Telegram Desktop</strong>
-                            <span>by</span><i>Khumoyun</i>
+                            <span>Telegram Desktop</span>
+                            <span>by</span><strong>Khumoyun</strong>
                         </div>
                     </div>
                 </div>
@@ -77,27 +80,23 @@
 
             <ul class="contacts-sorted-list">
                 <li class="sorted-list-item">
-                    <i class="fas fa-comments chats-icon"></i>
+                    <i class="icon-chat chats-icon"></i>
                     <p class="icon-title">All chats</p>
                 </li>
                 <li class="sorted-list-item">
-                    <i class="fas fa-user user-icon"></i>
+                    <i class="icon-user user-icon"></i>
                     <p class="icon-title">Users</p>
                 </li>
                 <li class="sorted-list-item">
-                    <i class="fas fa-users groups-icon"></i>
+                    <i class="icon-groups groups-icon"></i>
                     <p class="icon-title">Groups</p>
                 </li>
                 <li class="sorted-list-item">
-                    <i class="fas fa-bullhorn channels-icon"></i>
+                    <i class="icon-bullhorn channels-icon"></i>
                     <p class="icon-title">Channels</p>
                 </li>
                 <li class="sorted-list-item">
-                    <i class="fas fa-star favorites-icon"></i>
-                    <p class="icon-title">Favorites</p>
-                </li>
-                <li class="sorted-list-item">
-                    <i class="fas fa-robot bot-icon"></i>
+                    <i class="icon-bot bot-icon"></i>
                     <p class="icon-title">Bots</p>
                 </li>
             </ul>
@@ -107,7 +106,14 @@
                 <input type="search" class="search-input" placeholder="Search">
             </div>
             <ul class="contacts-ul">
-                <li class="contacts-li">
+                <!-- <li class="contacts-li">
+                    <img src="img/profile-img.jpg" alt="img" class="contacts-profile-img">
+                    <div class="contact-details">
+                        <p class="contact-name">Muhammad</p>
+                        <p class="contact-last-text">Hi, there. Why you haven't come to me? We all gathered and have a great meeting together</p>
+                    </div>
+                </li> -->
+                <!-- <li class="contacts-li">
                     <img src="img/profile-img.jpg" alt="" class="contacts-profile-img">
                     <div class="contact-details">
                         <p class="contact-name">Muhammad</p>
@@ -190,49 +196,115 @@
                         <p class="contact-name">Muhammad</p>
                         <p class="contact-last-text">Salom</p>
                     </div>
-                </li>
-                <li class="contacts-li">
-                    <img src="img/profile-img.jpg" alt="" class="contacts-profile-img">
-                    <div class="contact-details">
-                        <p class="contact-name">Muhammad</p>
-                        <p class="contact-last-text">Salom</p>
-                    </div>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="message-section">
             <div class="message-header-part">
-                <div class="mh-contact-details">
-                    <p class="mh-contact-name">Yunus</p>
-                    <p class="mh-contact-status">last seen recently</p>
+                <div class="mh-contact-details" type="button" data-bs-toggle="modal" data-bs-target="#userInfo">
+                    <p class="mh-contact-name"></p>
+                    <p class="mh-contact-status"></p>
                 </div>
                 <div class="mh-icons">
-                    <i class="fas fa-search search-icon"></i>
-                    <i class="fas fa-phone-alt phone-icon"></i>
-                    <i class="fas fa-ellipsis-v dotted-menu-bar"></i>
+                    <i class="icon-search search-icon"></i>
+                    <i class="icon-phone phone-icon"></i>
+                    <i class="icon-dots  dotted-menu-bar"></i>
+                </div>
+            </div>
+            <!-- MODAL -->
+            <div class="modal fade" id="userInfo" tabindex="-1" aria-labelledby="userInfoLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content userinfo-modal-content">
+                        <div class="modal-body userinfo-body">
+                            <div class="userinfo-nav">
+                                <p class="userinfo-text">User Info</p>
+                                <i class="icon-phone phone-icon"></i>
+                                <i class="icon-dots dotted-menu-bar"></i>
+                                <i class="icon-close close-icon" data-bs-dismiss="modal"></i>
+                            </div>
+                            <div class="userinfo">
+                                <img alt="img" class="profile-img">
+                                <p class="username"></p>
+                                <p class="user-status">online</p>
+
+                                <ul class="userinfo-ul">
+                                    <li class="userinfo-li">
+                                        <i class="icon-info info-icon"></i>
+                                        <div class="userinfo-details">
+                                            <p class="userinfo-details-name userinfo-details-bio">25 y.o traveler</p>
+                                            <p class="userinfo-details-title">
+                                                Bio
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="userinfo-li">
+                                        <i class="icon-at at-icon"></i>
+                                        <div class="userinfo-details">
+                                            <p class="userinfo-details-name userinfo-details-username"></p>
+                                            <p class="userinfo-details-title">
+                                                Username
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="userinfo-li">
+                                        <i class="icon-phone-outline"></i>
+                                        <div class="userinfo-details">
+                                            <p class="userinfo-details-name userinfo-details-phone">+998 90 900 2020</p>
+                                            <p class="userinfo-details-title">
+                                                Phone
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="userinfo-li">
+                                        <i class="icon-checkbox"></i>
+                                        <div class="userinfo-details">
+                                            <p class="userinfo-details-name">Notifications</p>
+                                            <p class="userinfo-details-title">
+                                                Enabled
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="userinfo-file-ul">
+                                <li class="userinfo-file-types">MEDIA</li>
+                                <li class="userinfo-file-types">DOCS</li>
+                                <li class="userinfo-file-types">LINKS</li>
+                                <li class="userinfo-file-types">AUDIO</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="message-section-main">
+                <h2>Select a chat to start messaging</h2>
                 <ul class="messages-ul">
-                    <!-- <li class="messages-li">
+                    <li class="messages-li">
                         <p class="sent-text">Salom</p>
+                        <span class="sent-time">16:55</span>
                     </li>
                     <li class="messages-li">
-                        <p class="li-text received-text">Hayr</p>
-                    </li> -->
+                        <p class="li-text received-text">Hayr
+                            <span class="received-time">16:55</span>
+                        </p>
+                        
+                    </li>
                 </ul>
             </div>
             <div class="typing-section">
                 <form data-submit-form class="typing-form">
 
                     <input type="file" class="file-input" hidden>
-                    <i class="fas fa-paperclip paperclip-icon"></i>
+                    <i class="icon-paperclip paperclip-icon"></i>
 
                     <textarea data-text placeholder="Write a message..." class="typing-area"></textarea>
-                    <i class="far fa-smile smile-icon"></i>
-                    <i class="fas fa-microphone voice-icon"></i>
-                    <button data-submit type="submit"><i class="fas fa-paper-plane send-icon"></i></button>
-                </form> 
+                    <i class="icon-smile smile-icon"></i>
+                    <i class="icon-microphone voice-icon"></i>
+                    <button data-submit type="submit"><i class="icon-sends send-icon"></i></button>
+                </form>
             </div>
         </div>
 
@@ -241,7 +313,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
-        <script src="js/users.js"></script>    
+        <script src="js/data.js"></script>
         <script src="js/script.js"></script>
     </div>
 </body>

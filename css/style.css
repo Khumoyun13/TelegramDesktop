@@ -17,6 +17,13 @@ ul, ol, p {
   padding: 0;
 }
 
+button {
+  outline: none;
+  background: inherit;
+  border: none;
+  line-height: 0;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -29,7 +36,7 @@ ul, ol, p {
   padding-top: 25px;
   width: 6%;
   height: 100%;
-  background-color: #293A4C;
+  background-color: #282e33ef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,18 +54,21 @@ ul, ol, p {
   display: none;
 }
 
-.menu-bar {
-  color: #8393A3;
-  font-size: 25px;
+.nav-section i {
+  font-size: 30px;
+  color: #8D939E;
+  margin-bottom: 10px;
   -webkit-transition: color ease 0.15s;
   transition: color ease 0.15s;
 }
 
-.menu-bar:hover {
-  color: #858585;
+.nav-section .icon-menu:hover {
+  color: #d8d8d8;
+  -webkit-transition: color ease 0.15s;
+  transition: color ease 0.15s;
 }
 
-.menu-button {
+.nav-section .menu-button {
   margin-bottom: 40px;
 }
 
@@ -102,22 +112,17 @@ ul, ol, p {
   margin-bottom: 30px;
 }
 
-.contacts-sorted-list .sorted-list-item i {
-  font-size: 30px;
-  color: #8393A3;
-  text-shadow: 0 0 10px #293A4C;
-  margin-bottom: 10px;
-  -webkit-transition: color ease 0.15s;
-  transition: color ease 0.15s;
-}
-
-.contacts-sorted-list .sorted-list-item i:hover {
-  color: #858585;
+.contacts-sorted-list .sorted-list-item:hover i,
+.contacts-sorted-list .sorted-list-item:hover .icon-title {
+  color: #d8d8d8;
 }
 
 .contacts-sorted-list .sorted-list-item .icon-title {
-  color: #8393A3;
-  font-size: 12px;
+  color: #8D939E;
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-transition: color ease 0.15s;
+  transition: color ease 0.15s;
 }
 
 .contacts-section {
@@ -175,7 +180,9 @@ ul, ol, p {
 }
 
 .contacts-section .contacts-ul .contacts-li {
-  width: 100%;
+  margin: 0 auto;
+  border-radius: 7px;
+  width: 95%;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,6 +190,12 @@ ul, ol, p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: background-color ease 0.15s;
+  transition: background-color ease 0.15s;
+}
+
+.contacts-section .contacts-ul .contacts-li:hover {
+  background-color: #EDF2F7;
 }
 
 .contacts-section .contacts-ul .contacts-li .contacts-profile-img {
@@ -213,7 +226,12 @@ ul, ol, p {
 
 .contacts-section .contacts-ul .contacts-li .contact-details .contact-last-text {
   font-size: 13px;
-  color: #8393A3;
+  color: #A8A8A8;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 250px;
 }
 
 .message-section {
@@ -253,6 +271,8 @@ ul, ol, p {
           justify-content: space-between;
   height: 45px;
   margin-right: auto;
+  width: 850px;
+  visibility: hidden;
 }
 
 .message-section .message-header-part .mh-contact-details .mh-contact-name {
@@ -286,10 +306,26 @@ ul, ol, p {
 }
 
 .message-section .message-section-main {
-  background-color: #74B5E0;
+  position: relative;
+  background-image: url(../img/background.jpg);
+  background-size: contain;
   width: 100%;
   height: 85%;
   overflow-y: scroll;
+}
+
+.message-section .message-section-main h2 {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  word-spacing: 5px;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  color: #464646c9;
 }
 
 .message-section .message-section-main .messages-ul {
@@ -323,6 +359,14 @@ ul, ol, p {
   font-weight: normal;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.message-section .message-section-main .messages-ul .li-text .received-time {
+  position: absolute;
+  font-size: 12px;
+  color: #A8A8A8;
+  bottom: -10px;
+  left: 5px;
 }
 
 .message-section .message-section-main .messages-ul .li-text::after {
@@ -393,7 +437,7 @@ ul, ol, p {
 }
 
 .message-section .typing-section .typing-form i {
-  font-size: 25px;
+  font-size: 26px;
   color: #A8A8A8;
   -webkit-transition: color ease 0.15s;
   transition: color ease 0.15s;
@@ -405,10 +449,10 @@ ul, ol, p {
 
 .message-section .typing-section .typing-form .typing-area {
   width: 80%;
-  height: 70%;
+  height: 100%;
   outline: none;
   border: none;
-  padding: 10px 10px 0;
+  padding: 18px 10px 0;
   resize: none;
   font-family: 'Roboto', sans-serif;
   margin-right: auto;
@@ -419,27 +463,26 @@ ul, ol, p {
 
 .message-section .typing-section .typing-form .typing-area::-webkit-input-placeholder {
   font-size: 15px;
+  padding-bottom: 0 !important;
 }
 
 .message-section .typing-section .typing-form .typing-area:-ms-input-placeholder {
   font-size: 15px;
+  padding-bottom: 0 !important;
 }
 
 .message-section .typing-section .typing-form .typing-area::-ms-input-placeholder {
   font-size: 15px;
+  padding-bottom: 0 !important;
 }
 
 .message-section .typing-section .typing-form .typing-area::placeholder {
   font-size: 15px;
+  padding-bottom: 0 !important;
 }
 
 .message-section .typing-section .typing-form .typing-area::-webkit-scrollbar {
   display: none;
-}
-
-.message-section .typing-section .typing-form .paperclip-icon {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
 }
 
 .message-section .typing-section .typing-form .voice-icon {
@@ -447,37 +490,32 @@ ul, ol, p {
 }
 
 .message-section .typing-section .typing-form .send-icon {
-  padding: 5px;
+  padding: 2px;
 }
 
 .message-section .typing-section .typing-form .send-icon:hover {
   color: #2DA4E1;
 }
 
-.message-section .typing-section .typing-form button {
-  outline: none;
-  background: inherit;
-  border: none;
-}
-
-.modal-dialog {
+/* SIDEBAR */
+.sidebar-modal-dialog {
   width: 300px;
   padding: 0;
   margin: 0;
 }
 
-.modal-content {
+.sidebar-modal-content {
   padding: 0;
   margin: 0;
   height: 100vh;
   border-radius: 0px;
 }
 
-.modal-body {
+.sidebar-modal-body {
   padding: 0;
 }
 
-.modal-head-part {
+.sidebar-modal-head-part {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,14 +531,14 @@ ul, ol, p {
   color: white;
 }
 
-.profile-img {
+.sidebar-profile-img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-.profile-number {
+.sidebar-profile-number {
   font-size: 14px;
 }
 
@@ -524,8 +562,9 @@ ul, ol, p {
 .modal-ul .modal-li i {
   text-align: center;
   width: 40px;
-  font-size: 22px;
+  font-size: 25px;
   color: #A8A8A8;
+  margin: 0;
   margin-right: 15px;
 }
 
@@ -537,56 +576,199 @@ ul, ol, p {
 
 .modal-ul .modal-li .toggle-icon {
   margin-left: auto;
+  font-size: 30px;
 }
 
-.message-section-main::-webkit-scrollbar,
-.contacts-ul::-webkit-scrollbar {
+/* USERINFO */
+.userinfo-modal-content {
+  width: 385px;
+  margin: 0 auto;
+}
+
+.userinfo-body {
+  padding: 15px 25px 0;
+}
+
+.userinfo-nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userinfo-nav i {
+  font-size: 25px;
+  margin-left: 20px;
+  color: #A8A8A8;
+}
+
+.userinfo-nav i:hover {
+  color: #858585;
+}
+
+.userinfo-text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.userinfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userinfo .profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.userinfo .username {
+  font-size: 18px;
+  color: #2D3748;
+  font-weight: 500;
+}
+
+.userinfo .user-status {
+  font-size: 14px;
+  color: #16B4EF;
+}
+
+.userinfo .userinfo-ul {
+  width: 100%;
+}
+
+.userinfo .userinfo-ul .userinfo-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+}
+
+.userinfo .userinfo-ul .userinfo-li:nth-child(4) i {
+  color: #4299e1;
+}
+
+.userinfo .userinfo-ul .userinfo-li:nth-child(4) i:hover {
+  color: #218de6;
+}
+
+.userinfo .userinfo-ul .userinfo-li i {
+  font-size: 25px;
+  margin-right: 25px;
+  color: #A8A8A8;
+}
+
+.userinfo .userinfo-ul .userinfo-li i:hover {
+  color: #858585;
+}
+
+.userinfo .userinfo-ul .userinfo-li .userinfo-details {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.userinfo .userinfo-ul .userinfo-li .userinfo-details .userinfo-details-title {
+  color: #A8A8A8;
+}
+
+.userinfo-file-ul {
+  margin-top: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.userinfo-file-ul .userinfo-file-types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 55px;
+  font-size: 12px;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.userinfo-file-ul .userinfo-file-types:nth-child(1) {
+  border-bottom: 2px solid #4299e1;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 
-.message-section-main::-webkit-scrollbar-button,
-.contacts-ul::-webkit-scrollbar-button {
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-button {
   width: 3px;
   height: 3px;
 }
 
-.message-section-main::-webkit-scrollbar-thumb,
-.contacts-ul::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
   background: #adadad;
-  border: 0px none #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-thumb:active {
+  background: #adadad;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: #c0c0c060;
   border-radius: 100px;
 }
 
-.message-section-main::-webkit-scrollbar-thumb:hover,
-.contacts-ul::-webkit-scrollbar-thumb:hover {
-  background: #e1e1e1;
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:hover {
+  background: #c0c0c060;
 }
 
-.message-section-main::-webkit-scrollbar-thumb:active,
-.contacts-ul::-webkit-scrollbar-thumb:active {
-  background: #e1e1e1;
+::-webkit-scrollbar-track:active,
+::-webkit-scrollbar-track:active {
+  background: #c0c0c060;
 }
 
-.message-section-main::-webkit-scrollbar-track,
-.contacts-ul::-webkit-scrollbar-track {
-  background: #7e7e7e60;
-  border: 0px none #ffffff;
-  border-radius: 100px;
-}
-
-.message-section-main::-webkit-scrollbar-track:hover,
-.contacts-ul::-webkit-scrollbar-track:hover {
-  background: #7e7e7e80;
-}
-
-.message-section-main::-webkit-scrollbar-track:active,
-.contacts-ul::-webkit-scrollbar-track:active {
-  background: #7e7e7e80;
-}
-
-.message-section-main::-webkit-scrollbar-corner,
-.contacts-ul::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-corner {
   background: transparent;
 }
 /*# sourceMappingURL=style.css.map */
