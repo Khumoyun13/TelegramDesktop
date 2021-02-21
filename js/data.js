@@ -1,44 +1,3 @@
-let images = ['img/profile-img.jpg']
-
-const data = {
-    users: [
-        {
-            id: 1,
-            name: `Muhammad`,
-            profilePhoto: images[0],
-            lastActivityTime: 1216513,
-            phone: 998977558595,
-            messages: [
-                {
-                    text: `Salom, dm`,
-                    owner: true
-                },
-                {
-                    text: `Tinc, ozinci`,
-                    owner: false
-                }
-            ]
-        },
-        {
-            id: 2,
-            name: `Yunus`,
-            profilePhoto: ``,
-            lastActivityTime: 1216513,
-            phone: 998998511515,
-            messages: [
-                {
-                    text: `Salom, dm`,
-                    owner: false
-                },
-                {
-                    text: `Tinc, ozinci`,
-                    owner: true
-                }
-            ]
-        }
-    ]
-}
-
 /* CONTACTS */
 let contactsList = document.querySelector('.contacts-ul')
 
@@ -72,6 +31,7 @@ async function users() {
         let contactStatus = document.querySelector('.mh-contact-status')
         let selectChat = document.querySelector('h2')
         let contactDetails = document.querySelector('.mh-contact-details')
+        let typingSection = document.querySelector('.typing-section')
         let modalProfileImg = document.querySelector('.profile-img')
         let modalUserName = document.querySelector('.username')
         let modalUserTitle = document.querySelector('.userinfo-details-username')
@@ -83,6 +43,7 @@ async function users() {
             contactStatus.textContent = `last seen recently`
             selectChat.textContent = ''
             contactDetails.style.visibility = 'visible'
+            typingSection.style.visibility = 'visible'
             modalProfileImg.setAttribute('src', user.picture.large)
             modalUserName.textContent = `${user.name.first} ${user.name.last}`
             modalUserTitle.textContent = `@${user.name.first}_${user.name.last.charAt(0)}`
@@ -133,6 +94,7 @@ async function users() {
                 let contactStatus = document.querySelector('.mh-contact-status')
                 let selectChat = document.querySelector('h2')
                 let contactDetails = document.querySelector('.mh-contact-details')
+                let typingSection = document.querySelector('.typing-section')
                 let modalProfileImg = document.querySelector('.profile-img')
                 let modalUserName = document.querySelector('.username')
                 let modalUserTitle = document.querySelector('.userinfo-details-username')
@@ -144,6 +106,7 @@ async function users() {
                     contactStatus.textContent = `last seen recently`
                     selectChat.textContent = ''
                     contactDetails.style.visibility = 'visible'
+                    typingSection.style.visibility = 'visible'
                     modalProfileImg.setAttribute('src', user.picture.large)
                     modalUserName.textContent = `${user.name.first} ${user.name.last}`
                     modalUserTitle.textContent = `@${user.name.first}_${user.name.last.charAt(0)}`

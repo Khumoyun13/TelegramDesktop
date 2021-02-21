@@ -1,6 +1,3 @@
-const { momentProperties } = require("./moment")
-const moment = require("./moment")
-
 let formElement = document.querySelector('[data-submit-form]')
 let textMessage = document.querySelector('[data-text]')
 let messagesList = document.querySelector('.messages-ul')
@@ -37,7 +34,7 @@ function textToMessage(value) {
 }
 
 function renderMessages(array) {
-    // messagesList.textContent = ""
+    messagesList.textContent = ""
 
     array.forEach((message, index) => {
         let newMessage = document.createElement('li')
