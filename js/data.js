@@ -90,6 +90,71 @@ async function users() {
             modalUserBio.textContent = `${user.location.city}, ${user.location.country}`
         });
 
+        /* SEARCH */
+
+        function filterChats(keyword) {
+            keyword = keyword.toLowerCase();
+            let sortedUsers = response.filter(function (element) {
+                let username = element.name.first;
+                let getUserName = username.toLowerCase();
+                let filtered = getUserName.includes(keyword);
+                return filtered
+            })
+            return sortedUsers
+        }
+
+        let searchInput = document.querySelector('.search-input')
+        searchInput.addEventListener('keyup', user => {
+            let showFilter = filterChats(searchInput.value);
+            contactsList.textContent = ''
+            console.log(showFilter);
+
+            showFilter.forEach(user => {
+                let newLiElement = document.createElement('li')
+                newLiElement.classList.add('contacts-li')
+
+                let newImgElement = document.createElement('img')
+                newImgElement.classList.add('contacts-profile-img')
+                newImgElement.setAttribute('src', user.picture.large)
+
+                let newDivElement = document.createElement('div')
+                newDivElement.classList.add('contact-details')
+
+                let newNameElement = document.createElement('p')
+                newNameElement.classList.add('contact-name')
+                newNameElement.textContent = `${user.name.first} ${user.name.last}`
+
+                newDivElement.appendChild(newNameElement)
+                newLiElement.appendChild(newImgElement)
+                newLiElement.appendChild(newDivElement)
+                contactsList.appendChild(newLiElement)
+
+                let contactName = document.querySelector('.mh-contact-name')
+                let contactStatus = document.querySelector('.mh-contact-status')
+                let selectChat = document.querySelector('h2')
+                let contactDetails = document.querySelector('.mh-contact-details')
+                let modalProfileImg = document.querySelector('.profile-img')
+                let modalUserName = document.querySelector('.username')
+                let modalUserTitle = document.querySelector('.userinfo-details-username')
+                let modalUserPhone = document.querySelector('.userinfo-details-phone')
+                let modalUserBio = document.querySelector('.userinfo-details-bio')
+
+                newLiElement.addEventListener('click', () => {
+                    contactName.textContent = `${user.name.first} ${user.name.last}`
+                    contactStatus.textContent = `last seen recently`
+                    selectChat.textContent = ''
+                    contactDetails.style.visibility = 'visible'
+                    modalProfileImg.setAttribute('src', user.picture.large)
+                    modalUserName.textContent = `${user.name.first} ${user.name.last}`
+                    modalUserTitle.textContent = `@${user.name.first}_${user.name.last.charAt(0)}`
+                    modalUserPhone.textContent = `${user.phone}`
+                    modalUserBio.textContent = `${user.location.city}, ${user.location.country}`
+                });
+            })
+        });
+
+
+
 
         // let searchInput = document.querySelector('.search-input')
 
@@ -111,46 +176,7 @@ async function users() {
 
     });
 
-    /* SEARCH */
 
-    function filterChats(keyword) {
-        keyword = keyword.toLowerCase();
-        let sortedUsers = response.filter(function (element) {
-            let username = element.name.first;
-            let getUserName = username.toLowerCase();
-            let filtered = getUserName.includes(keyword);
-            return filtered
-        })
-        return sortedUsers
-    }
-
-    let searchInput = document.querySelector('.search-input')
-    searchInput.addEventListener('keyup', user => {
-        let showFilter = filterChats(searchInput.value);
-        contactsList.textContent = ''
-        console.log(showFilter);
-
-        showFilter.forEach(user => {
-            let newLiElement = document.createElement('li')
-            newLiElement.classList.add('contacts-li')
-
-            let newImgElement = document.createElement('img')
-            newImgElement.classList.add('contacts-profile-img')
-            newImgElement.setAttribute('src', user.picture.large)
-
-            let newDivElement = document.createElement('div')
-            newDivElement.classList.add('contact-details')
-
-            let newNameElement = document.createElement('p')
-            newNameElement.classList.add('contact-name')
-            newNameElement.textContent = `${user.name.first} ${user.name.last}`
-
-            newDivElement.appendChild(newNameElement)
-            newLiElement.appendChild(newImgElement)
-            newLiElement.appendChild(newDivElement)
-            contactsList.appendChild(newLiElement)
-        })
-    });
 };
 
 

@@ -1,3 +1,6 @@
+const { momentProperties } = require("./moment")
+const moment = require("./moment")
+
 let formElement = document.querySelector('[data-submit-form]')
 let textMessage = document.querySelector('[data-text]')
 let messagesList = document.querySelector('.messages-ul')
@@ -59,6 +62,8 @@ paperclipButton.addEventListener('click', () => {
 })
 
 /* MODAL */
+
+
 
 
 

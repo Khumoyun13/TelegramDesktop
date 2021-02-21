@@ -81,6 +81,25 @@
             flex-direction: column;
             padding: 15px;
 
+            .messages-li{
+                margin: 10px 0;
+            }
+
+            .received-time{
+                position: absolute;
+                font-size: 12px;
+                color: #6b6b6b;
+                bottom: -20px;
+                left: 0px;
+            }
+            .sent-time{
+                position: absolute;
+                font-size: 12px;
+                color: #6b6b6b;
+                bottom: -20px;
+                right: 0px;
+            }
+
             .li-text {
                 position: relative;
                 overflow-wrap: break-word;
@@ -91,19 +110,11 @@
                 padding: 5px 13px;
                 margin: 5px 0;
                 border-radius: 5px 5px 5px 0px;
-                font-size: 15px;
+                font-size: 18px;
                 background-color: white;
                 color: black;
                 font-weight: normal;
                 transition: 1s;
-
-                .received-time{
-                    position: absolute;
-                    font-size: 12px;
-                    color: #A8A8A8;
-                    bottom: -10px;
-                    left: 5px;
-                }
 
                 &::after {
                     content: '';
@@ -132,7 +143,7 @@
                 padding: 5px 13px;
                 margin: 5px 0;
                 margin-left: auto;
-                font-size: 15px;
+                font-size: 18px;
                 color: black;
                 font-weight: normal;
                 transition: 1s;
